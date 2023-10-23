@@ -22,6 +22,9 @@ const Services = () => {
                     services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
             </div>
+            <div className="flex justify-center mt-12">
+                <button className="btn btn-outline text-[#FF3811] border-[#FF3811]">More Services</button>
+            </div>
         </div>
     );
 };
