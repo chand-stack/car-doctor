@@ -94,6 +94,10 @@ const Products = () => {
 </div>
 </div>
 
+<div className="flex justify-center mt-12 mb-24">
+                <button className="btn btn-outline text-[#FF3811] border-[#FF3811]">More Products</button>
+            </div>
+
             </div>
         </div>
     );
