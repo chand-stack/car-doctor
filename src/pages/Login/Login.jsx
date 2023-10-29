@@ -5,6 +5,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import axios from 'axios';
 
 const Login = () => {
   const {login} = useContext(AuthContext)
@@ -19,6 +20,12 @@ const Login = () => {
     login(email,passowrd)
     .then(result => {
       console.log(result.user);
+
+      const user = {email}
+      axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+      .then(res => {
+        console.log(res.data)
+      })
     })
     .catch(error => {
       console.log(error);
